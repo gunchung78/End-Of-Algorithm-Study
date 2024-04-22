@@ -8,4 +8,16 @@
 ## 분
 
 # 실행시간 
-## ms~ ms
+## 0.01ms~ 78.58ms
+def solution(participant, completion):
+    answer = ''
+    participant.sort()
+    completion.sort()
+
+    for i in range(len(participant)-1):
+        if participant[i] != completion[i]:
+            answer = participant[i]
+            return answer
+    if answer == '':
+        answer = participant[-1]
+    return answer
